@@ -1,5 +1,6 @@
 import { connectDB } from "@/util/db"
 import Link from "next/link";
+import ListItem from "./listitem";
 
 export default async function ListPage()
     {
@@ -9,18 +10,11 @@ export default async function ListPage()
 
         return(
             <div className="list-bg">
-                {
-                    result && result.length > 0 ? result.map((item, index)=>{
-                        return(
-                            <div key={index} className="list-item">
-                                <Link href={'/detail/' + item._id}>
-                                <h4>{item.title}</h4>
-                                <p>{item.content}</p>
-                                </Link>
-                            </div>
-                        )
-                    }) : <div> dkdkdkdk</div>
-                }
+                <ListItem/>
             </div>
         );
     }
+    {/*삭제하기 버튼 : 버튼을 누르며 statr를 변경해서 화면을 갱신*/}
+    // page.js의 기본값은 'use server' : 서버 컴포넌트
+    // onClick, useSTate, ... : 클라이언트 컴포넌트 'use client'
+    // 클라이언트 함수가 필요한 부분은 컴폰너트로 분리
