@@ -65,3 +65,16 @@ a{
 .logo{
   font-weight: bolder;
 }
+
+.navBar button{
+  padding: 8px 15px;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+}
+
+input{
+  padding: 10px;
+  display:block;
+  margin-bottom: 10px;
+}

@@ -8,9 +8,14 @@ export default async function ListPage()
         let result = await db.collection('post').find().toArray();
         console.log(result)
 
+        result = result.map(item => ({
+            ...item,
+            _id: item._id.toString(),
+        }));
+
         return(
             <div className="list-bg">
-                <ListItem/>
+                <ListItem result={result}/>
             </div>
         );
     }

@@ -1,6 +1,6 @@
 import { MongoClient } from 'mongodb';
 const url = "mongodb+srv://gkatjddl:gkatjddl@cluster0.ruqraup.mongodb.net/";
-const options = {useNewUrlParser: true, useUnifiedTopology: true};
+const options = {};
 let connectDB;
 
 if(process.env.NODE_ENV === 'development')

@@ -16,7 +16,10 @@ export default async function Home() {
   );
 }
 
-
+// app/page.js : '/' [홈페이지]
+// app/write/page.js : '/write' [write페이지]
+// nextjs + mongodb + vercel
+// --> 개인 웹사이트 개발&배포 해보기
 
 
 // app 폴더가 'http://localhost:3000/'
